@@ -1,0 +1,24 @@
+@startuml Exercice1
+
+|#LightSalmon|Etudiant|
+start
+:Click "Acceder au portail étudiant";
+:Choix "Creer un compte" ou "Connexion";
+:Creation du compte;
+:Tentative de Connexion;
+
+|#LightSkyBlue|Site|
+:Vérification des identifiants;
+
+if (identifiants) then (Oui)
+:Accessibilité au portail étudiant;
+stop
+
+
+else(Non)
+|#LightSalmon|Etudiant|
+:Affiche un message d erreur;
+stop
+endif
+
+@enduml

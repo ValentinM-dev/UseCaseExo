@@ -1,0 +1,37 @@
+@startuml exercice1
+
+left to right direction
+
+actor Etudiant as E
+
+skinparam Usecase {
+    BackgroundColor #F0F0F0
+    BorderColor #000000
+    FontSize 12
+}
+
+package "Espace Personnel" {
+    usecase "Créer un compte" as UC1
+    usecase "Se connecter" as UC2
+    usecase "Vérifier identifiants" as UC3
+    usecase "Se déconnecter" as UC4
+}
+
+E --> UC1
+E --> UC2
+E --> UC3
+E --> UC4
+
+note right of UC1
+    En tant qu étudiant, je veux créer un compte pour accéder à mon espace personnel.
+end note
+note right of UC2
+    En tant qu étudiant, je veux me connecter avec mon identifiant et mot de passe.
+end note
+note right of UC3
+    En tant qu étudiant, je veux être informé si mes identifiants sont incorrects.
+end note
+note right of UC4
+    En tant qu étudiant, je veux pouvoir me déconnecter pour sécuriser mes données.
+end note
+@enduml

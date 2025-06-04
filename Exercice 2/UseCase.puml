@@ -1,0 +1,72 @@
+@startuml Exercice2
+
+left to right direction
+
+actor "Visitor" as V #LightSkyBlue;text:LightSkyBlue
+actor "Users" as U #PaleGoldenRod;text:PaleGoldenRod
+actor "Admin" as A #PaleVioletRed;text:PaleVioletRed
+
+rectangle "BoutiqueDVD" {
+    usecase "S'inscrire" as UC1
+    usecase "Se connecter" as UC2
+    usecase "Liste des films" as UC3
+    usecase "Rechercher un film" as UC4
+    usecase "Vérification des informations" as UC5
+    usecase "Voir le détail d'un film" as UC6
+    usecase "Mettre un film dans le panier" as UC7
+    usecase "Voir le panier" as UC8
+    usecase "Supprimer un article du panier" as UC9
+    usecase "Modifier le contenu du panier" as UC10
+    usecase "Contacter le support" as UC11
+
+    usecase "Accéder au payement de sa reservation" as UC12
+    usecase "Valider la reservation des films dans le panier" as UC13
+    usecase "Avoir un récapitulatif de ces réservations" as UC14
+
+    usecase "Mettre à jour les informations d'un film" as UC15
+    usecase "Ajouter un film dans le catalogue" as UC16
+    usecase "Supprimer un film dans le catalogue" as UC17
+    usecase "Bloquer la reservation d'un film dans le catalogue" as UC18
+    usecase "Débloquer la réservation d'un film dans le catalogue" as UC19
+    usecase "Se déconnecter" as UC20
+    usecase "etre connecter" as UC21
+}
+
+V --> UC1
+V --> UC2
+V --> UC3
+V --> UC4
+V --> UC6
+V --> UC7
+V --> UC8
+V --> UC9
+V --> UC10
+V --> UC11
+
+U --> UC12
+U --> UC13
+U --> UC14
+U --> UC20
+
+A --> UC15
+A --> UC16
+A --> UC17
+A --> UC18
+A --> UC19
+
+UC20 ..> UC21:required
+
+UC5 ..> UC2:include
+UC12 ..> UC21:include
+UC13 ..> UC21:include
+UC14 ..> UC21:include
+UC15 ..> UC21:include
+UC16 ..> UC21:include
+UC17 ..> UC21:include
+UC18 ..> UC21:include
+UC19 ..> UC21:include
+
+U -|> V:herite
+A -|> U:herite
+
+@enduml

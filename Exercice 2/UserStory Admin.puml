@@ -1,0 +1,107 @@
+@startuml Exercice2
+
+left to right direction
+
+actor "Admin" as A #PaleVioletRed;text:PaleVioletRed
+
+rectangle "BoutiqueDVD" {
+    usecase "Liste des films" as UC1
+    usecase "Rechercher un film" as UC2
+    usecase "Voir le détail d'un film" as UC3
+    usecase "Mettre un film dans son panier" as UC4
+    usecase "Accéder à son panier" as UC5
+    usecase "Supprimer un film de son panier" as UC6
+    usecase "Mettre à jour le contenu de son panier" as UC7
+    usecase "Accéder au payement de sa reservation" as UC8
+    usecase "Valider la reservation des films dans le panier" as UC9
+    usecase "Avoir un récapitulatif de ces réservations" as UC10
+    usecase "Mettre à jour les informations d'un film" as UC11
+    usecase "Ajouter un film dans le catalogue" as UC12
+    usecase "Supprimer un film dans le catalogue" as UC13
+    usecase "Bloquer la reservation d'un film dans le catalogue" as UC14
+    usecase "Débloquer la réservation d'un film dans le catalogue" as UC15
+    usecase "Se déconnecter" as UC16
+    usecase "etre connecter" as UC17
+
+}
+
+A --> UC1
+A --> UC2
+A --> UC3
+A --> UC4
+A --> UC5
+A --> UC6
+A --> UC7
+A --> UC8
+A --> UC9
+A --> UC10
+A --> UC11
+A --> UC12
+A --> UC13
+A --> UC14
+A --> UC15
+A --> UC16
+
+note right of UC1
+L Admin peut voir la liste des films
+end note
+
+note right of UC2
+L Admin peut rechercher un film en particularité
+end note
+
+note right of UC3
+L Admin peut voir les détails d un film
+end note
+
+note right of UC4
+L Admin peut mettre un film dans son panier
+end note
+
+note right of UC5
+L Admin peut accéder à son panier
+end note
+
+note right of UC6
+L Admin peut supprimer un film de son panier
+end note
+
+note right of UC7
+L Admin peut mettre à jour le contenu de son panier
+end note
+
+note right of UC8
+L Admin peut Accéder au payement de sa réservation
+end note
+
+note right of UC9
+L Admin peut valider la réservation des films dans le panier
+end note
+
+note right of UC10
+L Admin peut avoir un récapitulatif de ces réservations
+end note
+
+note right of UC11
+L Admin peut mettre à jour les informations d un film dans le catalogue
+end note
+
+note right of UC12
+L Admin peut ajouter un film dans le catalogue
+end note
+
+note right of UC13
+L Admin peut supprimer un film dans le catalogue
+end note
+
+note right of UC14
+L Admin peut bloquer la réservation d un film dans le catalogue
+end note
+
+note right of UC15
+L Admin peut débloquer la réservation d un film dans le catalogue
+end note
+
+note right of UC16
+L Admin peut ce déconnecter sous condition d etre connecter
+end note

@@ -1,0 +1,72 @@
+@startuml Exercice2
+
+left to right direction
+
+actor "Visitor" as V #LightSkyBlue;text:LightSkyBlue
+
+Rectangle "BoutiqueDVD" {
+    usecase "S'inscrire" as UC1
+    usecase "Se connecter" as UC2
+    usecase "Liste des films" as UC3
+    usecase "Rechercher un film" as UC4
+    usecase "Vérification des informations" as UC5
+    usecase "Voir le détail d'un film" as UC6
+    usecase "Mettre un film dans le panier" as UC7
+    usecase "Voir le panier" as UC8
+    usecase "Supprimer un article du panier" as UC9
+    usecase "Modifier le contenu du panier" as UC10
+    usecase "Contacter le support" as UC11
+}
+
+V --> UC1
+V --> UC2
+V --> UC3
+V --> UC4
+V --> UC6
+V --> UC7
+V --> UC8
+V --> UC9
+V --> UC10
+V --> UC11
+
+note right of UC1
+Le Visiteur peut s inscrire au site de la Boutique
+end note
+
+note right of UC2
+Le Visiteur peut se connecter au site de la Boutique
+end note
+
+note right of UC3
+Le Visiteur peut voir la liste des films disponible dans la Boutique
+end note
+
+note right of UC4
+Le Visiteur peut rechercher un film en particularité dans la Boutique
+end note
+
+note right of UC6
+Le Visiteur peut voir le détail d un film en particularité
+end note
+
+note right of UC7
+Le Visiteur peut mettre un film dans le panier afin de le réservé
+end note
+
+note right of UC8
+Le Visiteur peut voir la totalité de son panier
+end note
+
+note right of UC9 
+Le Visiteur peut supprimé un film de son panier
+end note
+
+note right of UC10
+Le Visiteur peut modifier le contenu de son panier
+end note
+
+note right of UC11
+Le Visiteur peut contacter le support afin d avoir des informations
+end note
+
+@enduml

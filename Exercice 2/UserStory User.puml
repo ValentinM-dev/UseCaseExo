@@ -1,0 +1,84 @@
+@startuml Exercice2
+left to right direction
+
+
+actor "Users" as U #PaleGoldenRod;text:PaleGoldenRod
+
+rectangle "BoutiqueDVD" {
+    usecase "Liste des films" as UC1
+    usecase "Rechercher un film" as UC2
+    usecase "Voir le détail d'un film" as UC3
+    usecase "Mettre un film dans son panier" as UC4
+    usecase "Accéder à son panier" as UC5
+    usecase "Supprimer un film de son panier" as UC6
+    usecase "Mettre à jour le contenu de son panier" as UC7
+    usecase "Accéder au payement de sa reservation" as UC8
+    usecase "Valider la reservation des films dans le panier" as UC9
+    usecase "Avoir un récapitulatif de ces réservations" as UC10
+    usecase "Contacter le support" as UC11
+    usecase "Se déconnecter" as UC12
+    usecase "etre connecter" as UC13
+    }
+
+    U --> UC1
+    U --> UC2
+    U --> UC3
+    U --> UC4
+    U --> UC5
+    U --> UC6
+    U --> UC7
+    U --> UC8
+    U --> UC9
+    U --> UC10
+    U --> UC11
+    U --> UC12
+
+    note right of UC1
+    L User peut voir la liste des films
+    end note
+
+    note right of UC2
+    L User peut rechercher un film spécifique
+    end note
+
+    note right of UC3
+    L User peut voir le détail d un film
+    end note
+
+    note right of UC4
+    L User peut mettre un film dans son panier
+    end note
+
+    note right of UC5
+    L User peut Accéder a son panier
+    end note
+
+    note right of UC6
+    L User peut supprimer un produit de son panier
+    end note
+
+    note right of UC7
+    L User peut mettre à jour son panier
+    end note
+
+    note right of UC8
+    L User peut accéder au payement de son panier
+    end note
+
+    note right of UC9
+    L User peut valider la réservation de ces films
+    end note
+
+    note right of UC10
+    L User peut avoir un récapitulatif de ces réservations
+    end note
+
+    note right of UC11
+    L User peut contacter le support
+    end note
+
+    note right of UC12
+    L User peut ce déconnecter à condition d être connecté
+    end note
+
+    @enduml
