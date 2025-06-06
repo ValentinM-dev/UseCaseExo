@@ -29,7 +29,6 @@ rectangle "BoutiqueDVD" {
     usecase "Bloquer la reservation d'un film dans le catalogue" as UC18
     usecase "Débloquer la réservation d'un film dans le catalogue" as UC19
     usecase "Se déconnecter" as UC20
-    usecase "etre connecter" as UC21
 }
 
 V --> UC1
@@ -54,17 +53,17 @@ A --> UC17
 A --> UC18
 A --> UC19
 
-UC20 ..> UC21:required
+UC20 ..> UC2:required
 
 UC5 ..> UC2:include
-UC12 ..> UC21:include
-UC13 ..> UC21:include
-UC14 ..> UC21:include
-UC15 ..> UC21:include
-UC16 ..> UC21:include
-UC17 ..> UC21:include
-UC18 ..> UC21:include
-UC19 ..> UC21:include
+UC12 ..> UC2:include
+UC13 ..> UC2:include
+UC14 ..> UC2:include
+UC15 ..> UC2:include
+UC16 ..> UC2:include
+UC17 ..> UC2:include
+UC18 ..> UC2:include
+UC19 ..> UC2:include
 
 U -|> V:herite
 A -|> U:herite
