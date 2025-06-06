@@ -1,0 +1,35 @@
+@startuml exercice2
+
+|#DeepPink|Site|
+:Formulaire de contacte support;
+:Affichage des différents films;
+split
+
+|#LightSkyBlue|Visitor|
+:Rechercher un film;
+:Completer le formulaire du contact support;
+:Possibilité de voir les détails d un film;
+stop
+:Possibilité d acceder au panier;
+stop
+
+
+split again
+|#PaleGoldenRod|User|
+:Rechercher un film;
+:Completer le formulaire du contact support;
+:Possibilité de voir les détails d un film;
+stop
+:Possibilité d acceder au panier;
+stop
+
+split again
+|#PaleVioletRed|Admin|
+:Rechercher un film;
+:Completer le formulaire de contact support;
+:Possibilité de voir les détails d un film;
+stop
+:Possibilité d acceder au pannel Administrateur;
+stop
+:Possibilité d acceder au panier;
+stop

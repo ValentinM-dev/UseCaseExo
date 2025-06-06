@@ -1,0 +1,29 @@
+@startuml exercice2
+
+|#LightSkyBlue|Visitor|
+:Accès au site Boutique;
+:Choix entre inscription et connexion;
+split
+:Inscription;
+:Creation du compte;
+:Creation du identifiant;
+:Creation de l utilisateur;
+:Creation du mot de passe;
+:Enregistrement dans le site;
+stop
+split again
+:Connexion;
+:Entrer de l utilisateur;
+:Entrer du mot de passe;
+
+|#DeepPink|Site|
+:Verification des informations utilisateur;
+if(information) then (yes)
+:Accorde l acces au site;
+stop
+
+else(no)
+|Visitor|
+:Retourne une erreur dans la vérifications des informations;
+stop
+

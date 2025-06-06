@@ -1,0 +1,27 @@
+@startuml exercice2
+
+|#DeepPink|Site|
+:Affichage du  panier complet;
+
+|#LightSkyBlue|Visitor|
+split
+:Possibilité de modifier son panier;
+:Possibilité de supprimer un article de son panier;
+:Possibilité d ajouter un article déjà existant dans son panier;
+stop
+
+|#PaleGoldenRod|User|
+split again
+:Possibilité de modifier son panier;
+:Possibilité de supprimer un article de son panier;
+:Possibilité d ajouter un article déjà existant dans son panier;
+:Possibilité d acceder au payement du panier;
+stop
+
+|#PaleVioletRed|Admin|
+split again
+:Possibilité de modifier son panier;
+:Possibilité de supprimer un article de son panier;
+:Possibilité d ajouter un article déjà existant dans son panier;
+:Possibilité d acceder au payement du panier;
+stop

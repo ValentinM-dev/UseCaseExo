@@ -1,8 +1,0 @@
-@startuml exercice2
-
-|#LightSkyBlue|Visitor|
-:Accès au site Boutique;
-:Choix entre inscription et connexion;
-:Creation du compte;
-:Creation du identifiant;
-:Creation de l utilisateur;
