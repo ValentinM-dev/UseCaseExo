@@ -1,0 +1,10 @@
+@startuml Exercice2
+
+|#DeepPink|Site|
+:Affichage du récapitulatif panier;
+
+|#PaleGoldenRod|User|
+:Valide le payement;
+
+|Site|
+:Appel à la banque pour vérifier la faisabilité de l achat;

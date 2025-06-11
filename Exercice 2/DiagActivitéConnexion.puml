@@ -1,0 +1,14 @@
+@startuml exercice2
+
+|#LightSkyBlue|Visitor|
+while (connexion) is (no)
+:Entre l utilisateur;
+:Entre le mot de passe;
+:Valide la connexion;
+
+endwhile(yes)
+
+|#DeepPink|Site|
+:Connexion réussis;
+:Accés au site en tant qu utilisateur;
+stop

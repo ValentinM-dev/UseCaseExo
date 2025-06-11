@@ -1,0 +1,27 @@
+@startuml exercice2
+
+|#LightSkyBlue|Visitor|
+:Inscription;
+:Entre le nom d utilisateur;
+:Entre le mot de passe;
+:Confirme le mot de passe;
+:Entre l email;
+
+|Serveur|
+:Vérifie si l email est déjà dans la base;
+if (email?) then (Oui)
+   |Visitor|
+   :Email déjà existant;
+   stop
+else (val2)
+|Serveur|
+    :Enregistre l email;
+endif
+
+|Visitor|
+:Confirme l email;
+:Valide les informations;
+
+|#DeepPink|Serveur|
+:Enregistre les informations;
+stop
