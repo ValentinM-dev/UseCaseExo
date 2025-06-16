@@ -1,0 +1,35 @@
+@startuml Exercice3
+
+actor Utilisateur as U #LightSteelBlue
+
+participant Application as App #IndianRed
+participant Serveur as S #HotPink
+participant BaseDeDonnées as DB #AntiqueWhite
+
+U -> App : Lire les informations d'un film
+App -> S : Demande des informations du film
+S -> DB : Récupération des informations du film
+DB --> S : Envoie des informations du film
+S --> App : Réception des informations du film
+App --> U : Affichage des informations du film
+
+U -> App : Modification d'un film
+App -> S : Demande de modification d'un film
+S -> DB : Récupération des modifications du film
+DB --> S : Envoie des modifications du film
+S --> App : Récupération des modifications du film
+App --> U : Affichage des modifications du film
+
+U -> App : Demande de suppression du film
+App -> S : Récupération de la requete de la suppression
+S -> DB : Suppression du film
+DB --> S : Confirmation de la suppression du film
+S --> App : Récupération de la suppression du film
+App --> U : Affichage de la confirmation de suppression du film
+
+U -> App : Demande d'ajout d'un film
+App -> S : Récupére la requete d'ajout du film
+S -> DB : Ajout du film
+DB --> S : Confirmation d'ajout du film
+S --> App : Récupération de la confirmation d'ajout du film
+App --> U : Affichage du film ajouter

@@ -13,7 +13,7 @@ if (email?) then (Oui)
    |Visitor|
    :Email déjà existant;
    stop
-else (val2)
+else (non)
 |Serveur|
     :Enregistre l email;
 endif

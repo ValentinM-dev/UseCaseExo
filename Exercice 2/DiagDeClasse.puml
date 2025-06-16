@@ -1,0 +1,47 @@
+@startuml
+title "Diagramme de Classe"
+left to right direction
+class V as "Visitor" {
+    +inscription()
+    +seConnecter()
+    +rechercherProduit()
+    +voirDetailDuProduit()
+    +ajouterProduitDansLePanier()
+    +modifierLePanier()
+    +voirLePanier()
+    +contacterLeSupport()
+}
+
+class U as "Users" {
+    -name : string
+    -password : string
+    -role : string
+    +finaliserLaReservation()
+    +validationDeLaReservation()
+    +recapitulatifDesReservations()
+    +seDeconnecter()
+}
+
+class A as "Admin" {
+    +majFilm()
+    +ajouterFilm()
+    +supprimerFilm()
+    +bloquerUneReservation()
+    +debloquerUneReservation()
+}
+
+class MV as "Film" {
+    -name : string
+    -time : int
+    -auteur : string
+    -date : date
+}
+
+class P as "Panier" {
+    -prix : double
+    -nombreArticle : int
+    -detailarticle : string
+}
+
+V <|-- U : hérite
+U <|-- A : hérite
