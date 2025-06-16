@@ -1,6 +1,5 @@
 @startuml exercice1
 
-right to left direction
 
 actor Etudiant as E
 
